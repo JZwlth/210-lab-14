@@ -22,3 +22,27 @@ public:
 
     void print() const;
 };
+
+void Color::setRed(int r) { red = r; }
+void Color::setGreen(int g) { green = g; }
+void Color::setBlue(int b) { blue = b; }
+
+int Color::getRed() const { return red; }
+int Color::getGreen() const { return green; }
+int Color::getBlue() const { return blue; }
+
+void Color::print() const {
+    cout << "Color(R=" << setw(5) << red 
+         << ", G=" << setw(5) << green 
+         << ", B=" << setw(5) << blue << ")" << endl;
+}
+
+int main() {
+    Color color1(255, 0, 0);    // Red
+    Color color2(0, 255, 0);    // Green
+    Color color3(0, 0, 255);    // Blue
+    Color color4(128, 128, 128);// Gray
+
+    color1.print();
+    color2.print();
+    color3.pr
