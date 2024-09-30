@@ -23,6 +23,7 @@ public:
     void print() const;
 };
 
+// Function prototypes
 void Color::setRed(int r) { red = r; }
 void Color::setGreen(int g) { green = g; }
 void Color::setBlue(int b) { blue = b; }
@@ -32,12 +33,13 @@ int Color::getGreen() const { return green; }
 int Color::getBlue() const { return blue; }
 
 void Color::print() const {
-    cout << "Color(R=" << setw(5) << red 
-         << ", G=" << setw(5) << green 
-         << ", B=" << setw(5) << blue << ")" << endl;
+    cout << "Color(R=" << setw(3) << red 
+         << ", G=" << setw(3) << green 
+         << ", B=" << setw(3) << blue << ")" << endl;
 }
 
 int main() {
+    // Range for RGB 0 ~ 225
     Color color1(255, 0, 0);    // Red
     Color color2(0, 255, 0);    // Green
     Color color3(0, 0, 255);    // Blue
@@ -45,4 +47,14 @@ int main() {
 
     color1.print();
     color2.print();
-    color3.pr
+    color3.print();
+    color4.print();
+
+    color4.setRed(100);
+    color4.setGreen(100);
+    color4.setBlue(100);
+    cout << "Modified Gray color: ";
+    color4.print();
+
+    return 0;
+}
